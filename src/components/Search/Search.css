@@ -1,0 +1,9 @@
+#mediaBg{
+    height: 200px;
+}
+#bars{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 12rem auto !important;
+}

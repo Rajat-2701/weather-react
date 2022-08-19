@@ -1,0 +1,37 @@
+.showError{    
+    border-color: #a94442 !important;    
+    border-bottom: 2px solid;
+    color: #a94442 !important;    
+    margin-bottom: 15px;    
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .submit{
+    width: 10%;
+  }
+  .error{
+    border: 2px solid red;
+  }
+
+  .burger{
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  @media screen and (max-width: 400px) and (min-width: 300px) {
+    #navbar-mob{
+      width: 400px !important;
+    }
+    #video-mob{
+      display: none !important;
+    }
+    .mobile-bg{
+      display: block !important;
+      width: 100%;
+      height: 900px;
+      z-index: 1;
+    }
+  }
