@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Rajat-2701/weather-react.git/static/css/main.d8cb4566.css",
+    "main.js": "/Rajat-2701/weather-react.git/static/js/main.62daac7e.js",
+    "static/media/320px.mp4": "/Rajat-2701/weather-react.git/static/media/320px.614699c2e15459305023.mp4",
+    "static/media/2kMedia.mp4": "/Rajat-2701/weather-react.git/static/media/2kMedia.00b4ee28596405b5b121.mp4",
+    "static/media/galaxyHd.mp4": "/Rajat-2701/weather-react.git/static/media/galaxyHd.59f7a614a8fef0606d98.mp4",
+    "static/media/Montserrat-Regular.ttf": "/Rajat-2701/weather-react.git/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
+    "index.html": "/Rajat-2701/weather-react.git/index.html",
+    "main.d8cb4566.css.map": "/Rajat-2701/weather-react.git/static/css/main.d8cb4566.css.map",
+    "main.62daac7e.js.map": "/Rajat-2701/weather-react.git/static/js/main.62daac7e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8cb4566.css",
+    "static/js/main.62daac7e.js"
+  ]
+}
