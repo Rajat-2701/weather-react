@@ -23,7 +23,7 @@ const Search = () => {
       setLoading(true);
       axios
       .get(
-        `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=suObSExGdtMUuUrLJR4LAlk8GfQPaGth=${citySearch}`
+        `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=atn3uMwJfYdYUruhtXNQysB5DjLzsfBq&q=${citySearch}`
       )
       .then((response) => {
         setCitySearch("");
@@ -66,13 +66,13 @@ const Search = () => {
   </form>
 </div>
     }
-    {/* {typeof cityData != "undefined"
+    {typeof cityData != "undefined"
         ? cityData && (
             <div className="p-5 w-full">
               <OneDayForecast cityData={cityData} />
             </div>
           )
-        : "no data"} */}
+        : "no data"}
     </>
   );
 };

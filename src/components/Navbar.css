@@ -23,7 +23,7 @@
 
   @media screen and (max-width: 400px) and (min-width: 300px) {
     #navbar-mob{
-      width: 400px !important;
+      /* width: 400px !important; */
     }
     #video-mob{
       display: none !important;

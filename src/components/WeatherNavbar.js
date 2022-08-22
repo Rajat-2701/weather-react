@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import NavbarBrand from "react-bootstrap/esm/NavbarBrand";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import MenuIcon from "@material-ui/icons/Menu";
 import "../components/Navbar.css";
@@ -10,6 +10,7 @@ export default function WeatherNavbar() {
   const [sticky, setSticky] = useState(false);
   const [show, setShow] = useState(false);
 
+  const navigate = useNavigate();
   function setFixed() {
     if (window.scrollY >= 30) {
       setSticky(true);
@@ -17,7 +18,31 @@ export default function WeatherNavbar() {
       setSticky(false);
     }
   }
-
+  const handleCloseHome = (e) => {
+    e.preventDefault();
+    setShow(false);
+    navigate('/home')
+  }
+  const handleCloseSearch = (e) => {
+    e.preventDefault();
+    setShow(false);
+    navigate('/search')
+  }
+  const handleCloseOne = (e) => {
+    e.preventDefault();
+    setShow(false);
+    navigate('/one')
+  }
+  const handleCloseWeek = (e) => {
+    e.preventDefault();
+    setShow(false);
+    navigate('/week')
+  }
+  const handleCloseMonth = (e) => {
+    e.preventDefault();
+    setShow(false);
+    navigate('/month')
+  }
   useEffect(() => {
     window.addEventListener("scroll", setFixed);
 
@@ -81,9 +106,10 @@ export default function WeatherNavbar() {
               to="/home"
               className={
                 sticky
-                  ? "p-[15px] hover:text-indigo-600 hover:font-bold font-medium"
-                  : "p-[15px] hover:text-white font-medium"
+                  ? "p-[15px] responsive hover:text-indigo-600 hover:font-bold font-medium"
+                  : "p-[15px] responsive hover:text-white font-medium"
               }
+              onClick={handleCloseHome}
             >
               Home
             </Link>
@@ -91,9 +117,10 @@ export default function WeatherNavbar() {
               to="/search"
               className={
                 sticky
-                  ? "p-[15px] hover:text-indigo-600 hover:font-bold font-medium"
-                  : "p-[15px] hover:text-white font-medium"
+                  ? "p-[15px] responsive hover:text-indigo-600 hover:font-bold font-medium"
+                  : "p-[15px] responsive hover:text-white font-medium"
               }
+              onClick={handleCloseSearch}
             >
               Search
             </Link>
@@ -101,9 +128,10 @@ export default function WeatherNavbar() {
               to="/one"
               className={
                 sticky
-                  ? "p-[15px] hover:text-indigo-600 hover:font-bold font-medium"
-                  : "p-[15px] hover:text-white font-medium"
+                  ? "p-[15px] responsive hover:text-indigo-600 hover:font-bold font-medium"
+                  : "p-[15px] responsive hover:text-white font-medium"
               }
+              onClick={handleCloseOne}
             >
               1 Day Forecast
             </Link>
@@ -111,9 +139,10 @@ export default function WeatherNavbar() {
               to="/week"
               className={
                 sticky
-                  ? "p-[15px] hover:text-indigo-600 hover:font-bold font-medium"
-                  : "p-[15px] hover:text-white font-medium"
+                  ? "p-[15px] responsive hover:text-indigo-600 hover:font-bold font-medium"
+                  : "p-[15px] responsive hover:text-white font-medium"
               }
+              onClick={handleCloseWeek}
             >
               Weekly Forecast
             </Link>
@@ -121,9 +150,10 @@ export default function WeatherNavbar() {
               to="/month"
               className={
                 sticky
-                  ? "p-[15px] hover:text-indigo-600 hover:font-bold font-medium"
-                  : "p-[15px] hover:text-white font-medium"
+                  ? "p-[15px] responsive hover:text-indigo-600 hover:font-bold font-medium"
+                  : "p-[15px] responsive hover:text-white font-medium"
               }
+              onClick={handleCloseMonth}
             >
               Monthly Forecast
             </Link>

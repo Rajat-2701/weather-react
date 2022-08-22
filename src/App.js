@@ -9,6 +9,7 @@ import Search from "./components/Search/Search";
 import { BallTriangle } from "react-loader-spinner";
 import { weather_api_key, weather_api_url } from "./components/Api";
 import { useEffect, useState } from "react";
+import Landing from "./components/Landing";
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -44,6 +45,9 @@ function App() {
       {!loading ? (
         <BrowserRouter>
           <WeatherNavbar />
+          <Routes>
+            <Route exact path="/" element={<Landing/>} />
+          </Routes>
           <Routes>
             <Route exact path="/home" element={<Home />} />
           </Routes>
